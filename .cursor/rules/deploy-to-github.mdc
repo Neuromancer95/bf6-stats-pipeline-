@@ -1,0 +1,42 @@
+---
+description: Deploy / push from this project to GitHub (Neuromancer95/bf6-stats-pipeline-)
+globs: main.py,src/**/*.py,README.md,.gitignore,config*.yaml,requirements.txt
+alwaysApply: false
+---
+
+# Deploy to GitHub
+
+This project deploys to: **https://github.com/Neuromancer95/bf6-stats-pipeline-**
+
+## Remote
+
+- **Remote name:** `origin`
+- **URL:** `https://github.com/Neuromancer95/bf6-stats-pipeline-.git`
+
+## Deploy steps (from project root)
+
+1. **Ensure remote is set** (one-time if new clone):
+   ```bash
+   git remote add origin https://github.com/Neuromancer95/bf6-stats-pipeline-.git
+   ```
+   If already added, verify: `git remote -v`
+
+2. **Stage, commit, push:**
+   ```bash
+   git add .
+   git status
+   git commit -m "Your short commit message"
+   git push -u origin main
+   ```
+   Use `git push origin main` for later pushes if upstream is already set.
+
+3. **Branch:** Default branch is `main`. If the repo uses `master`, replace `main` with `master` in the push command.
+
+## Do not commit
+
+- `output/`, `data/`, `*.db`, `*.sqlite` (already in `.gitignore`)
+- Local secrets; keep `config.yaml` private if it contains your player list and add it to `.gitignore` if desired
+
+## When suggesting deploy
+
+If the user asks to deploy or push to GitHub, run the above steps from the **bf6-stats-pipeline** project root and use the `origin` remote and branch `main` (or `master` as appropriate).

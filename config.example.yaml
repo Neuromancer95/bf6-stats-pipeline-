@@ -1,0 +1,7 @@
+# Copy to config.yaml and add your players.
+# Platforms: pc, psn, xbox (and others per GameTools.Network API)
+players:
+  - name: "YourPlayerName"
+    platform: pc
+  - name: "OtherPlayer"
+    platform: psn

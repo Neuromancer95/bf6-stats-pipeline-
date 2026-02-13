@@ -1,0 +1,4 @@
+requests>=2.28.0
+pyyaml>=6.0
+# Optional for CSV flattening:
+# pandas>=2.0.0

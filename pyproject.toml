@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bf6-stats-pipeline"
+version = "0.1.0"
+description = "Pull BF6 player stats from GameTools.Network and save to JSON, CSV, or SQLite."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "requests>=2.28.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+bf6-stats-pipeline = "main:main"
+
+[tool.setuptools.package-dir]
+"" = "."
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.setuptools]
+py-modules = ["main"]
